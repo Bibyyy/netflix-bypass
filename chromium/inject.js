@@ -8,7 +8,7 @@
 
     function injectFetchHook() {
         if (window.fetch.toString().includes(HOOK_TAG)) return;
-        console.log('[Extension@netflix-bypass] Injecting script into page');
+        console.log(`${HOOK_TAG} Injecting script into page`);
 
         const originalFetch = window.fetch;
 
