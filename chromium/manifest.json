@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "NF Bypass",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Bypass the household restrictions on Netflix.",
   "action": {
     "default_popup": "popup/popup.html",
