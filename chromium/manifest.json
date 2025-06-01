@@ -1,20 +1,30 @@
 {
-    "manifest_version": 3,
-    "name": "Netflix Bypass Household Restrictions",
-    "version": "1.0",
-    "description": "Bypass the household restrictions on Netflix.",
-    "host_permissions": ["https://www.netflix.com/*"],
-    "content_scripts": [
-        {
-            "matches": ["https://www.netflix.com/*"],
-            "js": ["content.js"],
-            "run_at": "document_start",
-            "all_frames": true
-        }
-    ],
-    "web_accessible_resources": [
+  "manifest_version": 3,
+  "name": "NF Bypass",
+  "version": "1.1.0",
+  "description": "Bypass the household restrictions on Netflix.",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["tabs"],
+  "host_permissions": ["https://www.netflix.com/*"],
+  "content_scripts": [
     {
-      "resources": ["inject.js"],
+      "matches": ["https://www.netflix.com/*"],
+      "js": ["content-scripts/content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content-scripts/inject.js"],
       "matches": ["https://www.netflix.com/*"]
     }
   ]

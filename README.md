@@ -5,6 +5,8 @@ Bypassing the netflix household restriction
 Just a simple script to block the request to check the household restriction on netflix.
 (Work only for chromium-based browsers for now)
 
+The only permission required is "tabs" to be able to detect if the user is on netflix and to inject the script.
+
 ## Installation
 
 ### Chromium-based browsers
